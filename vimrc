@@ -35,6 +35,7 @@ nmap <C-Up> :BookmarkPrev <CR>
 nmap <C-Down> :BookmarkNext <CR>
 nmap <C-B> :BookmarkToggle <CR>
 nmap <F8> :TagbarToggle <CR>
+nmap <S-p> :Goyo <CR>
 
 let NERDTreeMapOpenInTab='\r'
 
@@ -89,4 +90,3 @@ let g:ctrlp_working_path_mode = 'ra'
 
 " GitGutter Configuration
 set updatetime=500
-
