@@ -18,6 +18,7 @@ Default path ~/.vimrc
 - vim-gitgutter (https://github.com/airblade/vim-gitgutter)
 - vim-javacomplete2 (https://github.com/artur-shaik/vim-javacomplete2)
 - goyo.vim (https://github.com/junegunn/goyo.vim)
+- vim-signature (https://github.com/kshenoy/vim-signature)
 
 ---
 
