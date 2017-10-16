@@ -1,4 +1,4 @@
-# doffiles
+# dotfiles
 This is my personal configuration for some applications (as vim, compton, i3
 and so). Those configurations are not definitine because I really like to 
 change a lit bit when I discovery a new vim plugins or a new configurations that help me in my job. 
