@@ -9,7 +9,7 @@ Fell free to download it and send to me an interesting new configuration.
 # vim
 Default path ~/.vimrc
 
-## used plugins
+## plugins
 - ctrlp (https://github.com/kien/ctrlp.vim)
 - nerdtree (https://github.com/scrooloose/nerdtree)
 - tagbar (https://github.com/majutsushi/tagbar)
@@ -23,9 +23,15 @@ Default path ~/.vimrc
 ---
 
 # i3
-Default path ~/.i3/config
+Default path ~/.config/i3/config
 
 ---
 
 # compton
 Default path ~/.config/compton.config
+
+# complementary apps
+- nm-applet
+- rofi
+- pavucontrol
+- arandr
