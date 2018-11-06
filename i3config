@@ -13,13 +13,13 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
-font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+font -misc-fixed-medium-r-normal--10-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
-Font pango:DejaVu Sans Mono 14
-# font pango:Terminus 11px
+
+font pango:Terminus 14px
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -88,29 +88,48 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+set $workspace1 "1: "
+set $workspace2 "2: "
+set $workspace3 "3: " 
+set $workspace4 "4: " 
+set $workspace5 "5: "
+set $workspace6 "6: "
+set $workspace7 "7: "
+set $workspace8 "8: "
+set $workspace9 "9: "
+
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
+bindsym $mod+8 workspace $workspace8
+bindsym $mod+9 workspace $workspace9
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+5 move container to workspace $workspace5
+bindsym $mod+Shift+6 move container to workspace $workspace6
+bindsym $mod+Shift+7 move container to workspace $workspace7
+bindsym $mod+Shift+8 move container to workspace $workspace8
+bindsym $mod+Shift+9 move container to workspace $workspace9
+
+assign [class="Vivaldi-stable"] $workspace1
+assign [class="Firefox"] $workspace2
+assign [class="X-terminal-emulator"] $workspace3
+assign [class="Franz"] $workspace4
+assign [class="Stoken-gui"] $workspace5
+assign [class="PulseUi"] $workspace5
+assign [class="Spotify"] $workspace6
+assign [class="jetbrains-studio"] $workspace7
+
+# for_window[window_type="normal"] border 1pixel
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -169,20 +188,23 @@ bar {
 exec_always gsettings set org.gnome.desktop.background show-desktop-icons false
 
 #Custom Configs
-exec --no-startup-id xrandr --output eDP1 --auto --left-of DP1
-exec --no-startup-id compton --opacity-rule '100:window_type = "dock" && class_g = "i3bar"' --config ~/.config/compton.conf -b
+exec --no-startup-id xrandr --output eDP1 --auto --left-of DP1 --scale 1x10
+exec --no-startup-id feh --bg-max ~/Pictures/alex_minimalist.png
+exec --no-startup-id compton -f -o 0.03 -O 0.035 -I 0.035
+exec --no-startup-id i3-msg border none
+
 focus_follows_mouse no
 
 # Exec utilities
 exec --no-startup-id nm-applet
 
 # Custom Keyboard
-bindsym Mod1+Tab exec rofi -show window
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show run -lines 4 -columns 4 -eh 2 -width 80 -bw 10 -bc "#2f343f" -bg "#2f343f" -fg "#f3f4f5" -hlbg "#2f343f" -hlfg "#9575cd"
 bindsym $mod+n exec nautilus ~/
 bindsym $mod+shift+v exec pavucontrol
 bindsym $mod+m move workspace to output left
-bindsym ctrl+Mod1+l exec i3lock -c 000000 -d
+bindsym $mod+Shift+s exec /home/ericbraga/.config/i3/i3-display-swap.sh
+bindsym ctrl+Mod1+l exec i3lock -c 000000 -d 
 bindsym $mod+shift+a exec arandr
 
 # Pulse Audio controls

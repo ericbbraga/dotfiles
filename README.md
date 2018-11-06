@@ -13,6 +13,7 @@ Default path ~/.vimrc
 - ctrlp (https://github.com/kien/ctrlp.vim)
 - nerdtree (https://github.com/scrooloose/nerdtree)
 - tagbar (https://github.com/majutsushi/tagbar)
+- lightline (https://github.com/itchyny/lightline.vim)_
 - vim-airline (https://github.com/vim-airline/vim-airline)
 - vim-bookmarks (https://github.com/MattesGroeger/vim-bookmarks)
 - vim-gitgutter (https://github.com/airblade/vim-gitgutter)
@@ -25,6 +26,10 @@ Default path ~/.vimrc
 # i3
 Default path ~/.config/i3/config
 
+# i3status
+
+Default path ~/.config/i3status/config
+
 ---
 
 # compton
@@ -35,3 +40,8 @@ Default path ~/.config/compton.config
 - rofi
 - pavucontrol
 - arandr
+- compton
+
+# complementary fonts
+- SanFranciscoFont: https://github.com/supermarin/YosemiteSanFranciscoFont
+- FontAwesome: https://github.com/FortAwesome/Font-Awesome
