@@ -20,6 +20,8 @@ Default path ~/.vimrc
 - vim-javacomplete2 (https://github.com/artur-shaik/vim-javacomplete2)
 - goyo.vim (https://github.com/junegunn/goyo.vim)
 - vim-signature (https://github.com/kshenoy/vim-signature)
+- vim-plug (https://github.com/junegunn/vim-plug)
+- pathogen (https://github.com/tpope/vim-pathogen)
 
 ---
 
@@ -43,5 +45,4 @@ Default path ~/.config/compton.config
 - compton
 
 # complementary fonts
-- SanFranciscoFont: https://github.com/supermarin/YosemiteSanFranciscoFont
-- FontAwesome: https://github.com/FortAwesome/Font-Awesome
+- awesome-terminal-fonts

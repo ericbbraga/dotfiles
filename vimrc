@@ -1,3 +1,21 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""
+""" Plugin Manager
+""""""""""""""""""""""""""""""""""""""""""""""""""
+call plug#begin('~/.vim/plugged')
+Plug 'https://github.com/kien/ctrlp.vim'
+Plug 'https://github.com/scrooloose/nerdtree'
+Plug 'https://github.com/majutsushi/tagbar'
+Plug 'https://github.com/itchyny/lightline.vim'
+Plug 'https://github.com/MattesGroeger/vim-bookmarks'
+Plug 'https://github.com/airblade/vim-gitgutter'
+Plug 'https://github.com/artur-shaik/vim-javacomplete2'
+Plug 'https://github.com/junegunn/goyo.vim'
+Plug 'https://github.com/kshenoy/vim-signature'
+call plug#end()
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+""" END
+""""""""""""""""""""""""""""""""""""""""""""""""""
 set textwidth=79
 set tabstop=4
 set expandtab
