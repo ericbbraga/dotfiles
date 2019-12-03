@@ -13,7 +13,7 @@ Default path ~/.vimrc
 - ctrlp (https://github.com/kien/ctrlp.vim)
 - nerdtree (https://github.com/scrooloose/nerdtree)
 - tagbar (https://github.com/majutsushi/tagbar)
-- lightline (https://github.com/itchyny/lightline.vim)_
+- lightline (https://github.com/itchyny/lightline.vim)
 - vim-airline (https://github.com/vim-airline/vim-airline)
 - vim-bookmarks (https://github.com/MattesGroeger/vim-bookmarks)
 - vim-gitgutter (https://github.com/airblade/vim-gitgutter)
@@ -28,9 +28,8 @@ Default path ~/.vimrc
 # i3
 Default path ~/.config/i3/config
 
-# i3status
-
-Default path ~/.config/i3status/config
+# i3blocks
+Default path ~/.config/i3blocks/config
 
 ---
 
