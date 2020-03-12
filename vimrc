@@ -4,13 +4,16 @@
 call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/kien/ctrlp.vim'
 Plug 'https://github.com/scrooloose/nerdtree'
-Plug 'https://github.com/majutsushi/tagbar'
 Plug 'https://github.com/itchyny/lightline.vim'
 Plug 'https://github.com/MattesGroeger/vim-bookmarks'
-Plug 'https://github.com/airblade/vim-gitgutter'
-Plug 'https://github.com/artur-shaik/vim-javacomplete2'
 Plug 'https://github.com/junegunn/goyo.vim'
 Plug 'https://github.com/kshenoy/vim-signature'
+Plug 'https://github.com/ervandew/supertab'
+Plug 'https://github.com/vim-scripts/Tabmerge'
+Plug 'https://github.com/tpope/vim-fugitive'
+Plug 'https://github.com/udalov/kotlin-vim'
+Plug 'https://github.com/keith/swift.vim'
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -45,6 +48,8 @@ set hls!
 set nowrap
 colorscheme koehler
 
+set completeopt=longest,menuone
+
 nnoremap <F3> :execute "lvimgrep /" .expand("<cword>") . "/j " . bufname("%") <bar> lw <cr>
 nmap <C-Left> gT <cr>
 nmap <C-Right> gt <cr>
@@ -52,10 +57,10 @@ map <F4> :NERDTreeToggle<CR>
 nmap <C-Up> :BookmarkPrev <CR>
 nmap <C-Down> :BookmarkNext <CR>
 nmap <C-B> :BookmarkToggle <CR>
-nmap <F8> :TagbarToggle <CR>
 nmap <S-p> :Goyo <CR>
 
 let NERDTreeMapOpenInTab='\r'
+let g:netrw_browsex_viewer= "xdg-open"
 
 set listchars=tab:».,trail:.,extends:#,nbsp:.
 

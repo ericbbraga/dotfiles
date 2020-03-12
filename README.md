@@ -42,6 +42,7 @@ Default path ~/.config/compton.config
 - pavucontrol
 - arandr
 - compton
+- xbacklight
 
 # complementary fonts
 - awesome-terminal-fonts
